@@ -63,63 +63,73 @@ System.out.println();
     HashMap<Character, Integer> converter = new HashMap<Character, Integer>(); // Hashmmap creation for changing letters to numbers
     converter.put('A', 1); converter.put('B', 2); converter.put('C', 3); converter.put('D', 4);converter.put('E', 5);converter.put('F', 6);converter.put('G', 7);converter.put('H', 8);
     converter.put('a', 1); converter.put('b', 2); converter.put('c', 3); converter.put('d', 4);converter.put('e', 5);converter.put('f', 6);converter.put('h', 7);converter.put('h', 8);
-    int counter = 1;
+    System.out.println("which piece would you like?");
+    String counter = scanner.next();
     int temp = converter.get(pawn.getpos_x());
     int temp2 = converter.get(answer_x);
     switch(counter){
-      case 1:{
+      case "pawn":{
         System.out.println();
         System.out.println("----------------------------------------");
         System.out.print("pawn move is ");
         pawn.check_movement(pawn.get_color(),temp2,answer_convertion,temp,pawn.getpos_y());
         System.out.println("----------------------------------------");
+        break;
 
       }
-      case 2:{
+      case "bishop":{
         System.out.println();
         System.out.println("----------------------------------------");
         System.out.print("bishop move is ");
         bishop.check_movement(temp2,answer_convertion,temp,bishop.getpos_y());
         System.out.println("----------------------------------------");
+        break;
+
 
       }
-      case 3:{
+      case "rook":{
         System.out.println();
         System.out.println("----------------------------------------");
         System.out.print("rook move is ");
         rook.check_movement(temp2,answer_convertion,temp,rook.getpos_y());
         System.out.println("----------------------------------------");
+        break;
 
       }
-      case 4:{
+      case "knight":{
         System.out.println();
         System.out.println("----------------------------------------");
         System.out.print("Knight move is ");
         knight.check_movement(temp2,answer_convertion,temp,knight.getpos_y());
         System.out.println("----------------------------------------");
+        break;
 
       }
-      case 5:{
+      case "queen":{
         System.out.println();
         System.out.println("----------------------------------------");
         System.out.print("Queen move is ");
         queen.check_movement(temp2,answer_convertion,temp,queen.getpos_y());
         System.out.println("----------------------------------------");
+        break;
 
       }
-      case 6:{
+      case "king":{
         System.out.println();
         System.out.println("----------------------------------------");
         System.out.print("King move is ");
         king.check_movement(temp2,answer_convertion,temp,king.getpos_y());
         System.out.println("----------------------------------------");
+        break;
 
       }
       default:
       System.out.println();
       System.out.println();
-      System.out.println("Thank you for checking your moves with Juan Garcia ");
+      System.out.println("");
     }
+    System.out.println("Thank you for checking your moves with Juan Garcia ");
+
 
   }// end of main
 }// end of the class
